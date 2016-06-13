@@ -7,7 +7,9 @@ In this course, we will create a mobile-first, responsive web site. We’ll star
 **Resources**
 - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web)
 
-**Day 3-5: JavaScript Web Applications**
+---
+
+###Day 3-5: JavaScript Web Applications
 
 In this course, we will code a progressive JavaScript web application. We’ll look at how to add “app-like” features to make it look and feel like a mobile app while still functioning like a website. We’ll write code for loading dynamic data, managing the browser history, and other progressive techniques like offline support. We’ll explore some of the tools JavaScript developers use to automate the testing process and create production versions of the application.
 
