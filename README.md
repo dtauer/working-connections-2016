@@ -1,6 +1,6 @@
 # Working Connections 2016
 
-Download Coursefiles from [GitHub](https://github.com/dtauer/working-connections-2016)
+**Download Course files from [GitHub](https://github.com/dtauer/working-connections-2016)**
 
 ###Day 1-2: Web Designer Workflows
 
