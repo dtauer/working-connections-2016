@@ -1,5 +1,7 @@
 # Working Connections 2016
 
+Download Coursefiles from [GitHub](https://github.com/dtauer/working-connections-2016)
+
 ###Day 1-2: Web Designer Workflows
 
 In this course, we will create a mobile-first, responsive web site. We’ll start by looking at how to approach a new design. Then we’ll take our design and move it to the browser writing all the HTML and CSS necessary to bring our design to life. The goal is to get hands-on experience using the latest techniques of a modern web designer.
