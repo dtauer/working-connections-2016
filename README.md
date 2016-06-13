@@ -7,6 +7,7 @@
 In this course, we will create a mobile-first, responsive web site. We’ll start by looking at how to approach a new design. Then we’ll take our design and move it to the browser writing all the HTML and CSS necessary to bring our design to life. The goal is to get hands-on experience using the latest techniques of a modern web designer.
 
 **Resources**
+- [Visual Studio Code](https://code.visualstudio.com)
 - [MDN Docs](https://developer.mozilla.org/en-US/docs/Web)
 - [How to Code a Homepage Template](http://medialoot.com/blog/how-to-code-a-homepage-template-with-html5-and-css3/)
 - [Retina-Ready Menu](http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/)
