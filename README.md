@@ -1,4 +1,4 @@
-## Working Connections 2016
+# Working Connections 2016
 
 ###Day 1-2: Web Designer Workflows
 
