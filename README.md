@@ -1,6 +1,6 @@
 # Working Connections 2016
 
-Github Repo: [https://github.com/dtauer/working-connections-2016]
+Github Repo: https://github.com/dtauer/working-connections-2016
 
 **Download Course files from [GitHub](https://github.com/dtauer/working-connections-2016/archive/master.zip)**
 **Download [Visual Studio Code](https://code.visualstudio.com)**
