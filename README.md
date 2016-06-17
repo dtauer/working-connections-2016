@@ -27,6 +27,7 @@ In this course, we will code a progressive JavaScript web application. We’ll l
 - [caniuse.com](http://caniuse.com/)
 - [http://standardjs.com/](http://standardjs.com/)
 - [HandlebarsJS](http://handlebarsjs.com/)
+- [Lesson Toggle Example](http://codepen.io/dtauer/pen/XKKLep)
  
 **Tutorial Sites**
 - http://webdesign.tutsplus.com/
