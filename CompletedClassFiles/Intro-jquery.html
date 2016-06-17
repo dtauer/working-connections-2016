@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Introduction</h1>
+    <form action="">
+        <input type="text" id="firstName">
+        <input type="button" id="myButton" value="Say Hello!">
+        <input type="button" value="Clear Name">
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    <script>
+
+        //Wait for the jQuery "ready" event before we can do anything
+        //document.addEventListener("ready", function(){ ... })
+        $(document).ready(function(){
+            console.log("jquery is ready");
+            //When the button is clicked send whatever is 
+            //in the input text field to the sayHello function
+            var bt = $("#myButton");
+            var text = $("#firstName");
+            var clearButton = $("input:last-child");
+
+            //button click event
+            bt.on("click", function(){
+                sayHello(text.val());
+                text.val("");
+                text.focus();
+            });
+
+            //When you hit enter in the text field
+            text.on("keypress", function(event){            
+                if(event.keyCode === 13){
+                    event.preventDefault();
+                    sayHello(text.val());
+                    text.val("");
+                    text.focus();
+                }  
+            });
+
+        
+            //When the clearButton is clicked, clear the text field
+            clearButton.on("click", function(){
+                text.val("");
+                text.focus();
+            }); 
+
+
+        });
+
+        function sayHello(person){
+            //Make sure a person was sent to the function
+            if(person === undefined || person === ""){
+                person = "Someone";
+            }
+            //console.log("Hello " + person);
+            //Template String Example:
+            console.log(`Hello ${person}. How are you?`);
+        }
+
+        
+
+       
+
+        
+
+
+    </script>
+</body>
+</html>

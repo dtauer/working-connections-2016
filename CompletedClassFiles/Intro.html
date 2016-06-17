@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Introduction</h1>
+    <form action="">
+        <input type="text" id="firstName">
+        <input type="button" id="myButton" value="Say Hello!">
+        <input type="button" value="Clear Name">
+    </form>
+    <script>
+        console.log("Hello World");
+
+        function sayHello(person){
+            //Make sure a person was sent to the function
+            if(person === undefined || person === ""){
+                person = "Someone";
+            }
+            //console.log("Hello " + person);
+            //Template String Example:
+            console.log(`Hello ${person}. How are you?`);
+        }
+        sayHello("John");
+        sayHello("Jan");
+        sayHello();
+        console.log("Another Message");
+
+
+        //When the button is clicked send whatever is 
+        //in the input text field to the sayHello function
+        var bt = document.getElementById("myButton");
+        var text = document.getElementById("firstName");
+        var clearButton = document.querySelector("input:last-child");
+
+        //button click event
+        bt.addEventListener("click", function(){
+            sayHello(text.value);
+            text.value = "";
+            text.focus();
+        });
+
+        //When you hit enter in the text field
+        text.addEventListener("keypress", function(event){            
+            if(event.keyCode === 13){
+                event.preventDefault();
+                sayHello(text.value);
+                text.value = "";
+                text.focus();
+            }  
+        });
+
+       
+        //When the clearButton is clicked, clear the text field
+        clearButton.addEventListener("click", function(){
+            text.value = "";
+            text.focus();
+        });
+
+
+    </script>
+</body>
+</html>

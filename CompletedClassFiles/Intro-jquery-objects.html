@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Introduction</h1>
+    <form action="">
+        <input type="text" id="firstName">
+        <input type="text" id="lastName">
+        <input type="button" id="myButton" value="Say Hello!">
+        <input type="button" value="Clear Name">
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    <script>
+
+        //Wait for the jQuery "ready" event before we can do anything
+        //document.addEventListener("ready", function(){ ... })
+        $(document).ready(function(){
+            console.log("jquery is ready");
+            //When the button is clicked send whatever is 
+            //in the input text field to the sayHello function
+            var bt = $("#myButton");
+            var firstName = $("#firstName");
+            var lastName = $("#lastName");
+            var clearButton = $("input:last-child");
+
+            //button click event
+            bt.on("click", function(){
+                var person = createPerson();
+                sayHello(person);
+                clearFields();
+            });
+
+            //When you hit enter in the text field
+            $("input[type=text]").on("keypress", function(event){            
+                if(event.keyCode === 13){
+                    event.preventDefault();
+                    var person = createPerson();
+                    sayHello(person);
+                    clearFields();
+                }  
+            });
+
+        
+            //When the clearButton is clicked, clear the text field
+            clearButton.on("click", function(){
+                clearFields();
+            }); 
+
+            //Utility function that resets the fields
+            function clearFields(){
+                firstName.val("");
+                lastName.val("");
+                firstName.focus();
+            }
+
+            //This function creates our person object
+            function createPerson(){
+                var person = {
+                    first: firstName.val(),
+                    last: lastName.val()
+                }
+                //send it back to whoever asked for it...
+                return person;
+            }
+
+
+        });
+
+        function sayHello(person){
+            //Make sure a person was sent to the function
+            if(person.first === undefined || person.first === ""){
+                person.first = "Someone";
+            }
+            //console.log("Hello " + person);
+            //Template String Example:
+            console.log(`Hello ${person.first} ${person.last}. How are you?`);
+        }
+
+
+    </script>
+</body>
+</html>

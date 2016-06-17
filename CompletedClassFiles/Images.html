@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Dosis', sans-serif;
+        }
+
+        .tile{
+           background-color:  #607D8B;
+           color: #fff;
+           width: 25%;
+           display: block;
+           padding: 10px;
+        }
+        
+        .tile img{
+            max-width: 100%;
+        }
+
+        .tile h3{
+            margin: 0 0 8px 0;
+        }
+
+        #container{
+            margin-top: 20px;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+
+</head>
+<body>
+
+    <input type="text" id="searchText">
+    <input type="button" id="searchButton" value="Search">
+
+    <div id="container">
+        
+    </div>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    
+    <!-- Add a script block for our code -->
+    <script>
+        //jQuery Ready Event
+        $(function(){
+
+            //This function gets called when we successfully load our data
+            function showPhotos(response){
+                var photoList = response.data.children;
+                $("#container").empty();
+                photoList.forEach(function(item){
+                    var tile = `<div class="tile">
+                                    <h3>${item.data.title}</h3>
+                                    <img src="${item.data.thumbnail}" alt="Placeholder">
+                                    <div>TBD</div>
+                                </div>`;
+                    $("#container").append($(tile));
+                });
+            }
+
+            //This function will search Reddit for cute photos of animals
+            function findPhotos(text){
+                //console.log("searching: " + text);
+                var redditURL = "https://www.reddit.com/r/aww/search.json";
+                $.ajax({
+                    url: redditURL,
+                    type: "GET",
+                    success: showPhotos,
+                    data: {q:text, restrict_sr:"on"}
+                });
+            }
+
+            //click event for button
+            $("#searchButton").on("click", function(){
+                findPhotos($("#searchText").val());
+            })
+
+            //keypress event for text field
+            $("#searchText").on("keypress", function(event){
+                if(event.keyCode === 13){
+                    findPhotos($("#searchText").val());
+                }
+            })
+
+        })
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,222 @@
+*, *:before, *:after{
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	font-family: 'Arima Madurai', sans-serif;
+	font-weight: 400;
+	color: #353b42;
+	padding-bottom: 500px;
+}
+
+.wrapper{
+	width: 100%;
+	padding: 20px;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+header:after, 
+#banner:after, 
+.feature:after
+{
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+
+header{
+	background-color: #f23f54;
+	color: #fff;
+}
+
+header h1{
+	font-weight: 700; /*bold*/
+	font-size: 2em; /* 32px */
+	text-align: center;
+}
+
+header input[type=text]{
+	background-color: #fff;
+	border: none;
+	color: #333;
+	font-size: 1em;
+	padding: 10px 20px;
+	margin: 30px 0;
+	width: 70%;
+}
+
+header input[type=button]{
+	background-color: #eee;
+	border: none;
+	color: #f23f54;
+	font-size: 1em;
+	padding: 10px 20px;
+	margin: 30px 0 30px -10px;
+	width: 30%;
+}
+
+header input[type=button]:hover{
+	background-color: #f4f7f9;
+}
+
+#banner{
+	background-color: #f4f7f9;	
+}
+
+#banner h2{
+	font-size: 3.6em;
+	font-weight: 700;
+	color: #f23f54;
+	padding-top: 60px;
+	text-align: center;
+}
+
+#banner p{
+	font-size: 1.2em;
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+#banner a{
+	background: #f23f54 url(../images/icn-app-store.png) no-repeat;
+	background-position: 16px 6px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5em;
+	padding: 5px 10px 15px 80px;
+	display: block;
+	max-width: 390px;
+	margin: 0 auto 40px auto;
+}
+
+#banner img{
+	margin: 0 auto;
+	display: block;
+}
+
+.feature{
+	min-height: 500px;
+}
+
+.feature h3{
+	color: #f23f54;
+	font-size: 1.8em;
+	padding: 100px 0 10px 0;
+	text-align: center;
+}
+
+.feature p{
+	margin-bottom: 20px;
+	font-size: 1.1em;
+	line-height: 1.8em;
+}
+
+.feature img{
+	display: block;
+	margin: 0 auto;
+}
+
+.feature-right{
+	background-color: #f4f7f9;
+}
+
+/* Call to Action and Footer Styles */
+.cta{
+	display: block;
+	max-width: 300px;
+	background-color: #f23f54;
+	text-align: center;
+	color: #fff;
+	padding: 20px;
+	text-decoration: none;
+	font-size:1.6em;
+	font-weight: 700;
+	margin: 0 auto;
+}
+
+footer ul{
+	max-width: 284px;
+	margin: 0 auto;
+}
+
+footer ul li{
+	display: inline-block;
+}
+
+footer ul li a{
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	text-indent: -1000px;
+	margin: 0 10px;
+}
+
+.facebook{ background: url(../images/social-facebook.png) no-repeat; }
+.twitter{ background: url(../images/social-twitter.png) no-repeat; }
+.google{ background: url(../images/social-google.png) no-repeat; }
+.instagram{ background: url(../images/social-instagram.png) no-repeat; }
+
+@media screen and (min-width: 700px){
+	/* Header */
+	header h1{
+		text-align: left;
+		float: left;
+	}
+	header form{
+		float: right;
+	}
+
+	/* Banner */
+	#banner section{
+		width: 50%;
+		float: left;
+		padding: 20px;
+	}
+	#banner h2, 
+	#banner p {
+		text-align: left;
+	}
+	#banner a{
+		margin:0 0 40px 0;
+	}
+
+	/* Feature 1 */
+	.feature section{
+		padding: 0 40px;
+	}
+
+	.feature-left section{
+		width: 50%;
+		float: left;
+	}
+	.feature-right section{
+		width: 50%;
+		float: right;
+	}
+	.feature h3{
+		text-align: left;
+	}
+	.feature section.image{
+		overflow: hidden;
+	}
+	.feature img{
+		position: relative;
+		bottom: -140px;
+		transition: bottom .6s ease-in-out;
+	}
+	.feature img:hover{
+		bottom: 0px;
+	}
+
+
+
+}
+
+
+
+
+
+

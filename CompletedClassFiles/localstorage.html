@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>User Preference Example</h1>
+    <p>This page lets you save your view preferences</p>
+
+    <h3>Preferences</h3>
+    <input type="number" id="fontSize" value="16" min="10" max="100">
+    <input type="color" id="pageColor" value="#ffffff">
+    <input type="button" value="Save">
+
+    <!-- 
+    We need:
+         - jquery
+         - a <script> block
+         - a jQuery "ready" event with a console.log statement 
+    -->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script>
+        //jQuery ready Event
+        $(function(){
+
+            if(localStorage && localStorage.getItem("size-pref")) {
+                //Grab localStorage preferences and apply them to page
+                var savedSize = localStorage.getItem("size-pref");
+                var savedColor = localStorage.getItem("color-pref");
+                $("body").css("font-size", savedSize + "px");
+                $("body").css("background-color", savedColor);
+
+                //Also set the values of our input fields to what is saved
+                $("#pageColor").val(savedColor);
+                $("#fontSize").val(savedSize);
+            }
+
+            //Event for when the font size is changed
+            $("#fontSize").on("change", function(){
+                var size = $("#fontSize").val();
+                $("body").css("font-size", size+"px");
+            })
+
+            //Event for when the color change
+           $("#pageColor").on("change", function(){
+               var color = $("#pageColor").val();
+               $("body").css("background-color", color);
+           })
+
+           //Save button click event
+           $("input[type=button]").on("click", function(){
+               //Save preferences to localStorage
+               var size = $("#fontSize").val();
+               var color = $("#pageColor").val();
+               localStorage.setItem("size-pref", size);
+               localStorage.setItem("color-pref", color);
+
+           })
+
+
+
+        });//end of ready event
+
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
