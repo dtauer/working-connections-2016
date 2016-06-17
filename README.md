@@ -15,6 +15,7 @@ In this course, we will create a mobile-first, responsive web site. We’ll star
 - [How to Code a Homepage Template](http://medialoot.com/blog/how-to-code-a-homepage-template-with-html5-and-css3/)
 - [Retina-Ready Menu](http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/)
 - [CSS Reference](http://tympanus.net/codrops/css_reference/)
+ 
 
 ---
 
@@ -28,6 +29,8 @@ In this course, we will code a progressive JavaScript web application. We’ll l
 - [http://standardjs.com/](http://standardjs.com/)
 - [HandlebarsJS](http://handlebarsjs.com/)
 - [Lesson Toggle Example](http://codepen.io/dtauer/pen/XKKLep)
+- [Material Palette](http://www.materialpalette.com/)
+- [Color Fav](http://colorfavs.com)
  
 **Tutorial Sites**
 - http://webdesign.tutsplus.com/
