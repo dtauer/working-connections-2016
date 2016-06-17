@@ -28,4 +28,10 @@ In this course, we will code a progressive JavaScript web application. We’ll l
 - [http://standardjs.com/](http://standardjs.com/)
 - [HandlebarsJS](http://handlebarsjs.com/)
  
-
+**Tutorial Sites**
+- http://webdesign.tutsplus.com/
+- http://tympanus.net/codrops/category/tutorials/
+- https://developer.mozilla.org/en-US/docs/Web/Tutorials
+- http://tutorialzine.com/posts/
+- https://www.codeschool.com/learn
+- https://scotch.io/
